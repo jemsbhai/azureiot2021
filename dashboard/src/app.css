@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: .5%;
+}
+.App{
+    width: 100%;
+}
+.hello{
+    font-family: 'Lato';
+    color: wheat;
+}
+.location{
+    background-color: #222222;
+    background-image: url('./assets/location.png');
+    background-repeat: no-repeat;
+    padding: 3%;
+}
+.people{
+    background-color: #222222;
+    background-image: url('./assets/people.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+.temp{
+    background-color: #222222;
+    background-image: url('./assets/temp.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+.air{
+    background-color: #222222;
+    background-image: url('./assets/hp.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+.light{
+    background-color: #222222;
+    background-image: url('./assets/light.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+.door{
+    background-color: #222222;
+    background-image: url('./assets/door.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+.speak{
+    background-color: #222222;
+    background-image: url('./assets/audio.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+.power{
+    background-color: #222222;
+    background-image: url('./assets/power.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    padding: 3%;
+}
+h1{
+    font-family: 'Lato';
+    color: #FFF;
+    text-align: right;
+    vertical-align: top;
+    margin-top: 10%;
+}
+.subtitle{
+    font-family: 'Lato';
+    color: #98EDFF;
+    font-weight: 700;
+    text-align: right;
+    margin-bottom: 10;
+    margin-top: -5%;
+}
