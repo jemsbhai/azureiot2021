@@ -78,7 +78,7 @@ function Dash() {
             {/*Light*/}
          <div style={{borderRadius:20, backgroundColor:'#383808', padding:'7.5%', marginTop:'5%', width:275, height:170, borderWidth:3, borderColor:"#919131", borderStyle:'double'}} className="light">
            <FaChevronCircleRight style={{color:"yellow", textAlign:'right', float:'right', fontSize:30}}/>
-           <div style={{fontFamily:'Lato', color:"yellow", fontWeight:'bold', fontSize:50}}>Lights</div>
+           <Link to="/light"><div style={{fontFamily:'Lato', color:"yellow", fontWeight:'bold', fontSize:50}}>Lights</div></Link>
            <div style={{fontFamily:'Lato', color:"#CECECE", fontSize:15, marginTop:'5%'}}>Light controls for power, brightness, colors in specific rooms, and more</div>
          </div>
          {/*Doors*/}
@@ -98,7 +98,7 @@ function Dash() {
          {/*Power*/}
          <div style={{borderRadius:20, backgroundColor:'#23142e', padding:'7.5%', marginTop:'5%', width:275, height:200, borderWidth:3, borderColor:"#422657", borderStyle:'double'}} className="power">
            <FaChevronCircleRight style={{color:"#DFB6FF", textAlign:'right', float:'right', fontSize:30}}/>
-           <div style={{fontFamily:'Lato', color:"#DFB6FF", fontWeight:'bold', fontSize:50}}>Power</div>
+           <Link to="/power"><div style={{fontFamily:'Lato', color:"#DFB6FF", fontWeight:'bold', fontSize:50}}>Power</div></Link>
            <img src={Chart} style={{width:'117%', margin:'-8%', marginBottom:'-10%', marginTop:'10%'}}></img>
          </div>
          </div>

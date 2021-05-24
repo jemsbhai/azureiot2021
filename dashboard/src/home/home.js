@@ -5,6 +5,7 @@ import { VscTriangleDown } from 'react-icons/vsc';
 import { VscTriangleUp } from 'react-icons/vsc';
 import { BiTimeFive } from 'react-icons/bi';
 import Chart from '../assets/chart.png';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -33,9 +34,9 @@ export default function Home() {
            <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right'}}/>
          </div>
          <div style={{borderRadius:20, backgroundColor:'#222222', padding:'5%', marginTop:'5%', width:330, borderStyle:'double', borderWidth:2, borderColor:"#444"}}>
-            <div style={{fontFamily:'Lato', color:"#FFFFFF", fontWeight:'bold',  fontSize:30, textAlign:'center', marginBottom:'5%'}}>See Doorways <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right', fontSize:20, marginTop:'5%'}}/>  </div>        
+            <Link to="/door"><div style={{fontFamily:'Lato', color:"#FFFFFF", fontWeight:'bold',  fontSize:30, textAlign:'center', marginBottom:'5%'}}>See Doorways <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right', fontSize:20, marginTop:'5%'}}/>  </div></Link>        
          </div>
-         {/*Temp*/}
+         {/*PM 2.5*/}
          <div style={{borderRadius:20, backgroundColor:'#222222', padding:'15%', marginTop:'5%', width:275, height:175}} className="temp">
            <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', fontSize:90}}>{peopleCount}</div>
            <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>PM 2.5 Air Quality</div>
@@ -71,27 +72,27 @@ export default function Home() {
            <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', marginTop:'5%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'red'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
            <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right'}}/>
          </div>
-                  {/*Temp*/}
-                  <div style={{borderRadius:20, backgroundColor:'#222222', padding:'15%', marginTop:'5%', width:275, height:175}} className="temp">
-           <div style={{fontFamily:'Lato', color:"#FFFFFF", fontWeight:'bold', fontSize:90}}>{peopleCount}°F</div>
-           <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>Average Floor Temperature</div>
-           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', marginTop:'5%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'red'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
+                  {/*PM 5*/}
+         <div style={{borderRadius:20, backgroundColor:'#222222', padding:'15%', marginTop:'5%', width:275, height:175}} className="temp">
+           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', fontSize:90}}>{peopleCount}</div>
+           <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>PM 5 Air Quality</div>
+           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', marginTop:'5%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'gold'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
            <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right'}}/>
          </div>
          </div>
          <div style={{position:'absolute', top:50, left:1075}}>
-             {/*Temp*/}
-             <div style={{borderRadius:20, backgroundColor:'#222222', padding:'15%', marginTop:'5%', width:275, height:175}} className="temp">
-           <div style={{fontFamily:'Lato', color:"#FFFFFF", fontWeight:'bold', fontSize:90}}>{peopleCount}°F</div>
-           <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>Average Floor Temperature</div>
-           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', marginTop:'5%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'red'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
+             {/*VoC Levels*/}
+             <div style={{borderRadius:20, backgroundColor:'#222222', padding:'15%', marginTop:'5%', width:275, height:125}} className="temp">
+             <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>VoC Levels</div>
+           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'gold', fontWeight:'bold', fontSize:90}}>{peopleCount}</div>
+           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'gold', fontWeight:'bold', marginTop:'0%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'red'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
            <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right'}}/>
          </div>
                   {/*Temp*/}
                   <div style={{borderRadius:20, backgroundColor:'#222222', padding:'15%', marginTop:'5%', width:275, height:175}} className="temp">
-           <div style={{fontFamily:'Lato', color:"#FFFFFF", fontWeight:'bold', fontSize:90}}>{peopleCount}°F</div>
-           <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>Average Floor Temperature</div>
-           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'red', fontWeight:'bold', marginTop:'5%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'red'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
+           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'gold', fontWeight:'bold', fontSize:90}}>{peopleCount}°F</div>
+           <div style={{fontFamily:'Lato', color:"#DDDDDD", fontWeight:'bold'}}>CO2 Levels</div>
+           <div style={{fontFamily:'Lato', color:parseInt(peopleCount)>85?'green':'gold', fontWeight:'bold', marginTop:'5%'}}>{parseInt(peopleCount)>85? <VscTriangleDown style={{color:'green'}}/>:<VscTriangleUp style={{color:'red'}}/>}{parseInt(peopleCount)>85?'-':'+'}5°F in the last hour</div>
            <FaChevronCircleRight style={{color:"#DDD", textAlign:'right', float:'right'}}/>
          </div>
          </div>
