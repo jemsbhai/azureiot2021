@@ -15,7 +15,7 @@ import Chart from '../assets/chart.png';
 
 
 function Dash() {
-  const location = "Microsoft Headquarters, Richmond"
+  const location = "Microsoft Headquarters, Redmond"
   const peopleCount = "85"
   return (
     <div className="App">

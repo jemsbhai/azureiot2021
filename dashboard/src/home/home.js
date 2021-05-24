@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function Home() {
-  const location = "Microsoft Headquarters, Richmond"
+  const location = "Microsoft Headquarters, Redmond"
   const peopleCount = "85"
   return (
     <div className="App">

@@ -13,7 +13,7 @@ import {XYPlot, LineSeries, AreaSeries} from 'react-vis';
 
 
 export default function Audio() {
-  const location = "Microsoft Headquarters, Richmond"
+  const location = "Microsoft Headquarters, Redmond"
   const peopleCount = "85"
   const [fg, setFg] = useState(false);
   const [ show, setShow ] = useState(false);

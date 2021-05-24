@@ -9,7 +9,7 @@ import Switch from "react-switch";
 
 
 export default function Door() {
-  const location = "Microsoft Headquarters, Richmond"
+  const location = "Microsoft Headquarters, Redmond"
   const peopleCount = "85"
   const [fg, setFg] = useState(false);
   const handleChange = () => {

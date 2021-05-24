@@ -13,9 +13,9 @@ import {XYPlot, LineSeries, AreaSeries} from 'react-vis';
 
 
 export default function Power() {
-  const location = "Microsoft Headquarters, Richmond"
+  const location = "Microsoft Headquarters, Redmond"
   const peopleCount = "85"
-  const [fg, setFg] = useState(false);
+  const [fg, setFg] = useState(true);
   const [ show, setShow ] = useState(false);
   const [color, setColor] = useState("#aabbcc");
   const [battery, setBattery] = useState(false);
@@ -26,9 +26,9 @@ export default function Power() {
     {x: 0, y: 8},
     {x: 1, y: 5},
     {x: 2, y: 4},
-    {x: 3, y: 9},
+    {x: 3, y: 3},
     {x: 4, y: 1},
-    {x: 5, y: 7},
+    {x: 5, y: 4},
     {x: 6, y: 6},
     {x: 7, y: 3},
     {x: 8, y: 2},
@@ -57,14 +57,12 @@ export default function Power() {
            <Switch onChange={handleChange} checked={fg} />
            </div>
            <div style={{marginTop:'5%'}}>
-           <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Status  </div>
-           <Switch onChange={handleChange} checked={fg} />
+           <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Status : Charging  </div>
+           
            </div>
            <div style={{marginTop:'5%'}}>
-           <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Color  </div>
-           <BsCircleFill style={{marginTop:'0.5%', fontSize:30, color:color}} onClick={()=>setShow(!show)}/>
+           
            </div>
-           {!show && <HexColorPicker color={color} onChange={setColor} />}
          </div>
       
           {/*Doors*/}
@@ -75,21 +73,18 @@ export default function Power() {
            <Switch onChange={handleChange} checked={fg} />
            </div>
            <div style={{marginTop:'5%'}}>
-           <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Status  </div>
-           <Switch onChange={handleChange} checked={fg} />
+           <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Status :  Charging
+ </div>
            </div>
            <div style={{marginTop:'5%'}}>
-           <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Color  </div>
-           <BsCircleFill style={{marginTop:'0.5%', fontSize:30, color:color}} onClick={()=>setShow(!show)}/>
            </div>
-           {!show && <HexColorPicker color={color} onChange={setColor} />}
          </div>
          </div>
         
          <div style={{position:'absolute', top:0, left:340}}>
          <div style={{fontFamily:'Lato', fontWeight:'bold', color:'#FFF', fontSize:40, textAlign:'left'}}>Batteries </div>
           {/*Doors*/}
-          <div style={{borderRadius:20, backgroundColor:'#301d40', padding:'7.5%', marginTop:'5%', width:300, height:280}} >
+          <div style={{borderRadius:20, backgroundColor:'#301d40', padding:'7.5%', marginTop:'5%', width:300, height:280, opacity:battery?1:0.3}} >
            <div style={{fontFamily:'Lato', color:"#B75CFF", fontWeight:'bold', fontSize:50}}>Battery A</div>
            <div style={{marginTop:'10%'}}>
            <div style={{fontFamily:'Lato', fontWeight:'bold', color:"#CECECE", fontSize:20, marginTop:'5%', float:'left', marginTop:'1%', marginRight:'5%'}}>Switch  </div>
